@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<body>
+    <h1>Enter Features</h1>
+
+    <form action="/" method="POST">
+        <input type="number" step="any" name="specific_gravety" placeholder="specific_gravety">
+        <input type="number" step="any" name="albumin" placeholder="albumin">
+        <input type="number" step="any" name="blood_urea" placeholder="blood_urea">
+        <input type="number" step="any" name="serum_creatinine" placeholder="serum_creatinine">
+        <input type="number" step="any" name="hemoglobine" placeholder="hemoglobine">
+        <input type="number" step="any" name="red_blood_cells" placeholder="red_blood_cells">
+        <input type="number" step="any" name="hypertension" placeholder="hypertension">
+        <input type="number" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias">
+        <input type="submit">
+    </form>
+
+
+    <hr>
+    
+    
+    {% if Result %}
+    <p>Diagonostic Result</p>
+    {{Result}}    
+    {% endif %}
+
+</body>
+
+
+</html>
