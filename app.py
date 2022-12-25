@@ -15,6 +15,11 @@ def index():
         red_blood_cells = request.form["red_blood_cells"]
         hypertension = request.form["hypertension"]
         diabetes_mellitias = request.form["diabetes_mellitias"]
+
+        # Test server
+        print(f"specific_gravety: {specific_gravety}, albumin: {albumin}, blood_urea: {blood_urea}, serum_creatinine: {serum_creatinine}, hemoglobine: {hemoglobine}, red_blood_cells: {red_blood_cells}, hypertension: {hypertension}, diabetes_mellitias: {diabetes_mellitias}")
+        # end Test
+        
         pred = m.CKD_Prediction(specific_gravety, albumin, blood_urea, serum_creatinine, hemoglobine, red_blood_cells, hypertension, diabetes_mellitias)
         r = pred
         if r == 1:
