@@ -11508,4 +11508,215 @@ html {
   background-color: #1a252f;
 }
 
+
+/* form style from here */
+
 body{color: #000;overflow-x: hidden;height: 100%;background-image: url("https://i.imgur.com/GMmCQHC.png");background-repeat: no-repeat;background-size: 100% 100%}.card{padding: 30px 40px;margin-top: 60px;margin-bottom: 60px;border: none !important;box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2)}.blue-text{color: #00BCD4}.form-control-label{margin-bottom: 0}input, textarea, button{padding: 8px 15px;border-radius: 5px !important;margin: 5px 0px;box-sizing: border-box;border: 1px solid #ccc;font-size: 18px !important;font-weight: 300}input:focus, textarea:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;border: 1px solid #00BCD4;outline-width: 0;font-weight: 400}.btn-block{text-transform: uppercase;font-size: 15px !important;font-weight: 400;height: 43px;cursor: pointer}.btn-block:hover{color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none !important;box-shadow: none !important;outline-width: 0}
+.form-title{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px auto;
+  font-size: 20px;
+
+}
+.form-control-label{
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 0px;
+  margin-left: -15px;
+
+}
+input{
+  text-align: left;
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+/*show report result here*/
+
+.report{
+  padding-top: 40px;
+ 
+}
+.result-ttitle{
+  background-color: #000;
+}
+.row-padding{
+  padding: 40px 0px;
+}
+.result-ttitle h1{
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 40px;
+  letter-spacing: 3px;
+}
+.result-ttitle p{
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0px 40px 0px ;
+  color: white;
+}
+.personal-details{
+  padding: 40px auto;
+}
+.personal-details h1{
+  font-size: 14px;
+  background-color: #000;
+  padding: 10px 0px;
+ padding-left: 10px;
+ border-radius: 5px;
+  color: white;
+}
+.per-details{
+  text-align: left;
+}
+.per-details p{
+ 
+}
+.per-details span{
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+  margin-left: 2rem;
+}
+.sexpart{
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.sex-patients {
+  padding-right: 0.25rem;
+  justify-content: center;
+  display: flex;
+  
+}
+.sex-patients p{
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+  padding-right: 25px;
+
+}
+
+.sex-patients span{
+ 
+}
+
+.p-sex{
+  font-size: 14px;
+  text-align: center;
+   padding: 10px 0px 0px 0px;
+   color: #000; 
+   
+   text-transform: capitalize;
+
+}
+.patient{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+
+.patient p{
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+}
+.patient span{
+  font-size: 14px;
+  text-align: center;
+  padding-left: 65px;
+  color: #000;
+  text-transform: capitalize;
+
+}
+.patient-age{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.patient-age p{
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+}
+.patient-age span{
+  font-size: 14px;
+  text-align: left;
+  padding-left: 75px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+
+/*cline-data form style here*/
+
+.cline-data{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.cline-data p{
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+}
+.cline-data span{
+  font-size: 14px;
+  text-align: center;
+  padding-right: 60%;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+
+}
+
+.checkup{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.checkup p{
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+
+
+}
+.checkup span{
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0px 0px 0px;
+  color: #000;
+  text-transform: capitalize;
+  padding-right: 60%;
+ 
+  
+}
+
+.gander{
+  margin-top: 45px;
+  justify-content: center;
+  align-items: center;
+}
