@@ -1,29 +1,295 @@
-<!DOCTYPE html>
-<body>
-    <h1>Enter Features</h1>
+{% extends "base.html" %}
+{% block body %}
+    <!-- All content here -->
+    <body id="page-top">
 
-    <form action="/" method="POST">
-        <input type="number" step="any" name="specific_gravety" placeholder="specific_gravety">
-        <input type="number" step="any" name="albumin" placeholder="albumin">
-        <input type="number" step="any" name="blood_urea" placeholder="blood_urea">
-        <input type="number" step="any" name="serum_creatinine" placeholder="serum_creatinine">
-        <input type="number" step="any" name="hemoglobine" placeholder="hemoglobine">
-        <input type="number" step="any" name="red_blood_cells" placeholder="red_blood_cells">
-        <input type="number" step="any" name="hypertension" placeholder="hypertension">
-        <input type="number" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias">
-        <input type="submit">
-    </form>
+        <!-- FORM -->
+        <div class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
+                    <h2 class="text-center">Request a Tele-diagnosis</h2>
+                    <p class="blue-text text-center">Just answer a few questions so that we can diagnose your renal health </p>
+                    <div class="card">
+                        <h5 class="text-center mb-4 form-title"> Fill the form based on your recent medical report</h5>
+                        <form class="form-card" action="/" method="POST">
+                            <div class="form-group col-sm-12"> 
+                                <label >Name </label> 
+                                <input type="text" class="form-control" name="name" placeholder="enter your Name">
+                            </div>
+                            <div class="d-flex justify-content-between ">
+                                
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Age </label> 
+                                    <input type="number"  name="age" placeholder="enter your age">
+                                </div>
+
+                                <div class="gander"> 
+                                    <label class="sex ">Sex : </label> 
+                                    <input type="radio" step="any" name="hypertension" value="1"> Male 
+                                    <input type="radio" step="any" name="hypertension" value="0"> Female <br> 
+                                </div>
+            
 
 
-    <hr>
-    
-    
-    {% if Result %}
-    <p>Diagonostic Result</p>
-    {{Result}}    
-    {% endif %}
+                            </div>
 
-</body>
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Specific Gravety (sg)<span class="text-info"> </span></label> 
+                                    <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
+                                    <input type="number" step="any" name="specific_gravety" placeholder="enter your sg level">
+                                </div>
+
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Blood urea (bu) <span class="text-info">*mgs/dl</span></label> 
+                                    <!-- <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">  -->
+                                    <input type="number" step="any" name="blood_urea" placeholder="enter your bu level">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Red Blood Cells count (rbc)<span class="text-info"> *millions/cmm</span></label> 
+                                    <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
+                                    <input type="number" step="any" name="red_blood_cells" placeholder="enter your rbc score">
+                                </div>
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Serum Creatinine (sc)<span class="text-info"> *mgs/dl</span></label> 
+                                    <!-- <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">  -->
+                                    <input type="number" step="any" name="serum_creatinine" placeholder="enter your sc level">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Hemoglobine (hemo)<span class="text-info"> *gms</span></label> 
+                                    <!-- <input type="text" id="job" name="job" placeholder="" onblur="validate(5)">  -->
+                                    <input type="number" step="any" name="hemoglobine" placeholder="enter your hemo quantity">
+                                </div>
+                            </div>
+
+                
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Hypertension<span class="text-danger"> *</span></label> 
+                                    <div>
+                                        <input type="radio" step="any" name="hypertension" value="1"> Yes 
+                                        <input type="radio" step="any" name="hypertension" value="0"> No <br> 
+                                    </div>
+                                </div>
+                            </div>
 
 
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Diabetes Mellitias<span class="text-danger"> *</span></label> 
+                                    <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
+                                    <div>
+                                        <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
+                                        <input type="radio" name = "diabetes_mellitias" value="1"> Yes 
+                                        <input type="radio" name = "diabetes_mellitias" value="0"> No <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Albumin<span class="text-danger"> *</span></label> 
+                                    <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
+                                    <div>
+                                        <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
+                                        <input type="radio" name = "albumin" value="1"> Yes 
+                                        <input type="radio" name = "albumin" value="0"> No <br>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                                    <!--
+                                        <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3" >Albumin<span class="text-danger"> </span></label>
+                                   <div class="albumin-radio px-3">
+                                    <input type="radio" class="albumin"  name = "albumin" value="1"><p>Yes</p> 
+                                    <input type="radio"class="albumin"  name = "albumin" value="0"><p>No</p> <br>
+                                   </div>
+                                </div>
+                            </div>
+<select name="albumin" type="number" id="inputState" class="form-control">
+                                      <option selected>Choose albumin level (more than)</option>
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                      </select><br>
+                                    </select>
+
+                                    --> 
+                                    
+                              
+
+
+                            <!-- SUBMIT -->
+                            <div class="row d-flex justify-content-center">
+                                <div class="form-group col-sm-6"> 
+                                    <!-- <button type="submit" class="btn-block btn-primary">Analyze</button> 
+                                         <input type="submit" value="Analyze Your Kidney Health" class="btn btn-block btn-primary text-center">
+                                     -->
+                                     <button type="submit"  value="Analyze Your Kidney Health" class="btn btn-block btn-primary text-center" >Analyze Your Kidney Health</button>
+                                   
+                                </div>
+                            </div>
+
+                        </form>
+
+
+
+<!-- start-->
+<hr>
+
+                        <section class="report">
+
+
+                            <div class="result-ttitle">
+                                <h1>Kidney health checkup report</h1>
+                                <p> Date: Today date time</p> 
+                            
+                            </div>
+                            <div class="row row-padding ">
+                                <div class="col-lg-12 ">
+                                           <!--personal data report start-->
+                                    <div class="personal-details">
+                                        <h1 class="text-left">Personal Information</h1>
+                            
+                                        <div class="patient">
+                                            <p>Name </p><span>:name of the patient</span>
+                                           </div>
+                                           
+                                           
+                                           <div class="sexpart">
+                                            <div class="patient-age">
+                                                <p>Age </p><span>:Age of the patient</span>
+                                               </div>
+                                              
+                                            <div class="sex-patients">
+                                                <p>Sex</p><span  class="p-sex"> :sex of the patients</span>
+                                            
+                                            </div>
+                                        </div>
+                                      
+                            
+                                    </div>
+                            
+                                     <!--personal data report end-->
+                            
+                                      <!--clinic data report start-->
+                                    <div class="personal-details">
+                                        <h1 class="text-left">Clinical Data</h1>
+                            
+                                        <div class="cline-data">
+                                            <p>Specific Gravety </p><span>:value</span>
+                                             
+                                        </div>
+                                        <div class="cline-data">
+                                            <p>Albumin </p><span>:value</span>
+                                          
+                                        </div>
+                                      
+                                        <div class="cline-data">
+                                            <p>blood urea (mgs/d) </p><span>:value</span>
+                                             
+                                        </div>
+                                      
+                                        <div class="cline-data">
+                                            <p>Serum Creatinine (mgs/dl) </p><span>:value</span>
+                                         
+                                        </div>
+                                      
+                                        <div class="cline-data">
+                                            <p>hemoglobin (gms) </p><span>:value</span>
+                                            
+                                        </div>
+                                      
+                                        <div class="cline-data">
+                                            <p>Red Blood Cell (millions/cm) </p><span>:value</span>
+                                          
+                                        </div>
+                                      
+                                        <div class="cline-data">
+                                            <p>Hypertension </p><span>:value</span>
+                                            
+                                        </div>
+                                        <div class="cline-data">
+                                            <p>diabetes mellitias </p><span class="text-center">:value</span>
+                                            
+                                        </div>
+                                      
+                                      
+                                      
+                            
+                                    </div>
+                            <!--clinic data report end-->
+                            <!--checkup report start-->
+                                    <div class="personal-details">
+                                        <h1 class="text-left">kidney checkup Report</h1>
+                                        <div class="cline-data">
+                                            <p>kidney Health Status </p><span class="text-center">:value</span>
+                                            
+                                        </div>
+                                        <div class="cline-data">
+                                            <p>Risk Develop Log term renal disease  </p><span class="text-center">:value</span>
+                                            
+                                        </div>
+                                      
+                            
+                                    </div>
+                            
+                                    <!--checkup report end-->
+                                    <embed src="" type="application/pdf" width="100%" height="auto">
+                            
+                            
+                                </div>
+                            
+                            </div>
+                            
+                        </section>
+
+
+
+<!-- end-->
+
+
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END FORM -->
+
+
+
+
+            <!-- </div> -->
+        <!-- </section> -->
+
+
+
+
+        {% if Result %}
+   
+
+        <p>Diagonostic Result</p>
+       
+       
+        {{Result}}   
+
+        {% endif %}
+        
+
+    </body>
+    {% endblock %}
 </html>
