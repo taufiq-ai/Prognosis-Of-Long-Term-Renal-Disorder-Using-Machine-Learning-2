@@ -1,29 +1,130 @@
-<!DOCTYPE html>
-<body>
-    <h1>Enter Features</h1>
+{% extends "base.html" %}
+{% block body %}
+    <!-- All content here -->
+    <body id="page-top">
 
-    <form action="/" method="POST">
-        <input type="number" step="any" name="specific_gravety" placeholder="specific_gravety">
-        <input type="number" step="any" name="albumin" placeholder="albumin">
-        <input type="number" step="any" name="blood_urea" placeholder="blood_urea">
-        <input type="number" step="any" name="serum_creatinine" placeholder="serum_creatinine">
-        <input type="number" step="any" name="hemoglobine" placeholder="hemoglobine">
-        <input type="number" step="any" name="red_blood_cells" placeholder="red_blood_cells">
-        <input type="number" step="any" name="hypertension" placeholder="hypertension">
-        <input type="number" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias">
-        <input type="submit">
-    </form>
+        <!-- FORM -->
+        <div class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
+                    <h2 class="text-center">Request a Tele-diagnosis</h2>
+                    <p class="blue-text text-center">Just answer a few questions so that we can diagnose your renal health </p>
+                    <div class="card">
+                        <h5 class="text-center mb-4">Fill the form based on your recent medical report</h5>
+                        <form class="form-card" action="/" method="POST">
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Specific Gravety (sg)<span class="text-info"> </span></label> 
+                                    <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
+                                    <input type="number" step="any" name="specific_gravety" placeholder="enter your sg level">
+                                </div>
+
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Blood urea (bu) <span class="text-info">*mgs/dl</span></label> 
+                                    <!-- <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">  -->
+                                    <input type="number" step="any" name="blood_urea" placeholder="enter your bu level">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Red Blood Cells count (rbc)<span class="text-info"> *millions/cmm</span></label> 
+                                    <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
+                                    <input type="number" step="any" name="red_blood_cells" placeholder="enter your rbc score">
+                                </div>
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Serum Creatinine (sc)<span class="text-info"> *mgs/dl</span></label> 
+                                    <!-- <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">  -->
+                                    <input type="number" step="any" name="serum_creatinine" placeholder="enter your sc level">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Hemoglobine (hemo)<span class="text-info"> *gms</span></label> 
+                                    <!-- <input type="text" id="job" name="job" placeholder="" onblur="validate(5)">  -->
+                                    <input type="number" step="any" name="hemoglobine" placeholder="enter your hemo quantity">
+                                </div>
+                            </div>
+
+                
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Hypertension<span class="text-danger"> *</span></label> 
+                                    <div>
+                                        <input type="radio" step="any" name="hypertension" value="1"> Yes 
+                                        <input type="radio" step="any" name="hypertension" value="0"> No <br> 
+                                    </div>
+                                </div>
+                            </div>
 
 
-    <hr>
-    
-    
-    {% if Result %}
-    <p>Diagonostic Result</p>
-    {{Result}}    
-    {% endif %}
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Diabetes Mellitias<span class="text-danger"> *</span></label> 
+                                    <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
+                                    <div>
+                                        <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
+                                        <input type="radio" name = "diabetes_mellitias" value="1"> Yes 
+                                        <input type="radio" name = "diabetes_mellitias" value="0"> No <br>
+                                    </div>
+                                </div>
+                            </div>
 
-</body>
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3" >Albumin<span class="text-danger"> </span></label>
+                                    <select name="albumin" type="number" id="inputState" class="form-control">
+                                      <option selected>Choose albumin level (more than)</option>
+                                      <option>0</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                      </select><br>
+                                    </select>
+                                </div>
+                            </div>
 
 
+                            <!-- SUBMIT -->
+                            <div class="row justify-content-end">
+                                <div class="form-group col-sm-6"> 
+                                    <!-- <button type="submit" class="btn-block btn-primary">Analyze</button>  -->
+                                    <input type="submit" class="btn-block btn-primary">
+                                </div>
+                            </div>
+
+                        </form>
+
+                        {% if Result %}
+                        <hr>
+        
+                        <p>Diagonostic Result</p>
+                        {{Result}}   
+        
+                        <hr>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END FORM -->
+
+
+
+
+            <!-- </div> -->
+        <!-- </section> -->
+
+
+
+        
+
+    </body>
+    {% endblock %}
 </html>

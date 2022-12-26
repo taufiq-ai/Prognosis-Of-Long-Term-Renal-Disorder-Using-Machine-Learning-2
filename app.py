@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import model_joblib as m
+import test as m
 
 
 app = Flask(__name__)

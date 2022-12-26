@@ -6,9 +6,9 @@ import numpy as np
 import pandas as pd
 
 #Extra
-# import math
-# import warnings
-# warnings.filterwarnings(action='ignore')
+import math
+import warnings
+warnings.filterwarnings(action='ignore')
 
 from sklearn.model_selection import train_test_split
 
