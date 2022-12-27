@@ -36,7 +36,7 @@
                     <div class="card">
                         <h5 class="text-center mb-4 form-title"> Fill the form based on your recent medical report</h5>
                         
-                        <form class="form-card" action="/" method="POST">
+                        <form class="form-card" action="/report" method="POST">
                             <div class="form-group col-sm-12"> 
                                 <label >Name </label> 
                                 <input type="text" class="form-control" name="name" placeholder="enter your Name">
@@ -49,7 +49,7 @@
                                 </div>
 
                                 <div class="gander"> 
-                                    <label class="sex ">Sex : </label> 
+                                    <label class="sex ">Sex<span class="text-danger"> *</span> : </label> 
                                     <input type="radio" step="any" name="sex" value="Male"> Male 
                                     <input type="radio" step="any" name="sex" value="Female"> Female <br> 
                                 </div>
@@ -153,114 +153,6 @@
                 </div>
             </div>
         </div>
-
-
-
-        <!-- start report generation-->
-        {% if Result %}
-        <section class="page-section bg-primary text-white mb-0">
-        <div class="container-fluid px-1 py-5 mx-auto">
-            <div class="row d-flex justify-content-center">
-                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
-                    <h2 class="text-center">Tele-diagnosis Result</h2>
-                    <p class="white-text text-center">The result has been generated based on your clinical data provided in the above form.</p>
-                    <div class="card">
-                        <section class="report">
-
-                            <div class="result-ttitle">
-                                <h1>Kidney health checkup report</h1>
-                                <p> Date: Today date time</p> 
-                            </div>
-
-                            <div class="row row-padding ">
-                                <div class="col-lg-12 ">
-
-                                    <!--personal data report start-->
-                                    <div class="personal-details">
-                                        <h1 class="text-left">Personal Information</h1>
-                            
-                                        <div class="patient">
-                                            <p>Name </p><span>{{name}}</span>
-                                        </div>
-                                        
-                                        
-                                        <div class="sexpart">
-                                            <div class="patient-age">
-                                                <p>Age </p><span>{{age}}</span>
-                                            </div>
-                                            
-                                            <div class="sex-patients">
-                                                <p>Sex</p><span  class="p-sex">{{sex}}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                            
-                            
-                                    <!--clinic data report start-->
-                                    <div class="personal-details">
-                                        <h1 class="text-left">Clinical Data</h1>
-                            
-                                        <div class="cline-data">
-                                            <p>Specific Gravety </p><span>{{specific_gravety}}</span> 
-                                        </div>
-
-                                        <div class="cline-data">
-                                            <p>Albumin </p><span>:{{albumin}}.00 +</span>
-                                        </div>
-                                    
-                                        <div class="cline-data">
-                                            <p>blood urea (mgs/d) </p><span>:{{blood_urea}}</span>
-                                        </div>
-                                    
-                                        <div class="cline-data">
-                                            <p>Serum Creatinine (mgs/dl) </p><span>:{{serum_creatinine}}</span>
-                                        </div>
-                                    
-                                        <div class="cline-data">
-                                            <p>hemoglobin (gms) </p><span>:{{hemoglobine}}</span>
-                                        </div>
-                                    
-                                        <div class="cline-data">
-                                            <p>Red Blood Cell (millions/cm) </p><span>:{{red_blood_cells}}</span>
-                                        </div>
-                                    
-                                        <div class="cline-data">
-                                            <p>Hypertension </p><span>:{{hypertension}}</span>
-                                        </div>
-
-                                        <div class="cline-data">
-                                            <p>diabetes mellitias: {{diabetes_mellitias}} </p><span class="text-center">:{{diabetes_mellitias}}</span>
-                                        </div>
-                                    </div>
-
-                                    <!--checkup report start-->
-                                    <div class="personal-details">
-                                        <h1 class="text-left">kidney checkup Report</h1>
-
-                                        <div class="cline-data">
-                                            <p>kidney Health Status </p><span class="text-center">:{{status}}</span> 
-                                        </div>
-
-                                        <div class="cline-data">
-                                            <p>Risk Develop Log term renal disease  </p><span class="text-center">:{{risk}}</span>
-                                        </div>
-                                    </div>
-                            
-                                    <!--checkup report end-->
-                                    <embed src="" type="application/pdf" width="100%" height="auto">
-
-                                </div>
-                            </div>
-                            
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        {% endif %}
-        
 
     </body>
     {% endblock %}
