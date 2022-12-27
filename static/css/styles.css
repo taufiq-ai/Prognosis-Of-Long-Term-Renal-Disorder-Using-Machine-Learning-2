@@ -596,7 +596,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {
@@ -11543,7 +11543,7 @@ input{
  
 }
 .result-ttitle{
-  background-color: #000;
+  background-color: #333232;
 }
 .row-padding{
   padding: 40px 0px;
@@ -11567,7 +11567,7 @@ input{
 }
 .personal-details h1{
   font-size: 14px;
-  background-color: #000;
+  background-color: #333232;
   padding: 10px 0px;
  padding-left: 10px;
  border-radius: 5px;
@@ -11583,7 +11583,7 @@ input{
   font-size: 14px;
   text-align: center;
   padding: 10px 0px 0px 0px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
   margin-left: 2rem;
 }
@@ -11616,7 +11616,7 @@ input{
   font-size: 14px;
   text-align: center;
    padding: 10px 0px 0px 0px;
-   color: #000; 
+   color: #333232; 
    
    text-transform: capitalize;
 
@@ -11633,14 +11633,14 @@ input{
   font-size: 14px;
   text-align: left;
   padding: 10px 0px 0px 0px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
 }
 .patient span{
   font-size: 14px;
   text-align: center;
   padding-left: 65px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
 
 }
@@ -11654,14 +11654,14 @@ input{
   font-size: 14px;
   text-align: left;
   padding: 10px 0px 0px 0px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
 }
 .patient-age span{
   font-size: 14px;
   text-align: left;
   padding-left: 75px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
 }
 
@@ -11677,14 +11677,14 @@ input{
   font-size: 14px;
   text-align: left;
   padding: 10px 0px 0px 0px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
 }
 .cline-data span{
   font-size: 14px;
   text-align: center;
   padding-right: 60%;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
   letter-spacing: 3px;
 
@@ -11699,7 +11699,7 @@ input{
   font-size: 14px;
   text-align: left;
   padding: 10px 0px 0px 0px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
 
 
@@ -11708,7 +11708,7 @@ input{
   font-size: 14px;
   text-align: left;
   padding: 10px 0px 0px 0px;
-  color: #000;
+  color: #333232;
   text-transform: capitalize;
   padding-right: 60%;
  
