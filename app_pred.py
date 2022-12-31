@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 from joblib import load
 
-ordinal_enc =   load('ordinal_enc.joblib')
-minmax_norm  =   load('minmax_norm.joblib')
-knn_imp     =   load('knn_imp.joblib')
-model       =   load('9_RandomForestClassifier_99')
+ordinal_enc =   load('joblib_dump/ordinal_enc.joblib')
+minmax_norm =   load('joblib_dump/minmax_norm.joblib')
+knn_imp     =   load('joblib_dump/knn_imp.joblib')
+model       =   load('joblib_dump/9_RandomForestClassifier_99')
 
 def NewTest(Xtest, ordinal_enc, minmax_enc,knn_imp, model):
     # encoding

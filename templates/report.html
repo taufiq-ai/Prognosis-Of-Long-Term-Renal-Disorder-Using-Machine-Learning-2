@@ -16,7 +16,7 @@
 
                         <div class="result-ttitle">
                             <h1>Kidney health checkup report</h1>
-                            <p> Date: Today date time</p> 
+                            <p> Issue: {{context['issue_date']}}</p> 
                         </div>
 
                         <div class="row row-padding ">
@@ -52,31 +52,31 @@
                                     </div>
 
                                     <div class="cline-data">
-                                        <p>Albumin </p><span>:{{context['albumin']}}.00 +</span>
+                                        <p>Albumin </p><span> {{context['albumin']}}.00 +</span>
                                     </div>
                                 
                                     <div class="cline-data">
-                                        <p>blood urea (mgs/d) </p><span>:{{context['blood_urea']}}</span>
+                                        <p>Pus Cell Clumps </p><span> {{context['pus_cell_clumps']}}</span>
                                     </div>
                                 
                                     <div class="cline-data">
-                                        <p>Serum Creatinine (mgs/dl) </p><span>:{{context['serum_creatinine']}}</span>
+                                        <p>Serum Creatinine (mgs/dl) </p><span> {{context['serum_creatinine']}}</span>
                                     </div>
                                 
                                     <div class="cline-data">
-                                        <p>hemoglobin (gms) </p><span>:{{context['hemoglobine']}}</span>
+                                        <p>hemoglobin (gms) </p><span> {{context['hemoglobine']}}</span>
                                     </div>
                                 
                                     <div class="cline-data">
-                                        <p>Red Blood Cell (millions/cm) </p><span>:{{context['red_blood_cells']}}</span>
+                                        <p>Red Blood Cell (millions/cm) </p><span> {{context['red_blood_cells']}}</span>
                                     </div>
                                 
                                     <div class="cline-data">
-                                        <p>Hypertension </p><span>:{{context['hypertension']}}</span>
+                                        <p>Hypertension </p><span> {{context['hypertension']}}</span>
                                     </div>
 
                                     <div class="cline-data">
-                                        <p>diabetes mellitias: {{diabetes_mellitias}} </p><span class="text-center">:{{context['diabetes_mellitias']}}</span>
+                                        <p>diabetes mellitias {{diabetes_mellitias}} </p><span class="text-center">:{{context['diabetes_mellitias']}}</span>
                                     </div>
                                 </div>
 
@@ -85,11 +85,15 @@
                                     <h1 class="text-left">kidney checkup Report</h1>
 
                                     <div class="cline-data">
-                                        <p>kidney Health Status </p><span class="text-center">:{{status}}</span> 
+                                        <p><b>Tele-diagnosis result </b></p><span class="text-center"><b>{{Result}}</b></span> 
+                                    </div>
+                                    
+                                    <div class="cline-data">
+                                        <p><b>Kidney health status </b></p><span class="text-center"><b>{{status}}</b></span> 
                                     </div>
 
                                     <div class="cline-data">
-                                        <p>Risk Develop Log term renal disease  </p><span class="text-center">:{{risk}}</span>
+                                        <p><b>Risk to develop long-term kidney disease</b></p><span class="text-center"><b>{{risk}}</b></span>
                                     </div>
                                 </div>
                         

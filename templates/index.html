@@ -27,12 +27,108 @@
     <!-- All content here -->
     <body id="page-top">
 
-        <!-- FORM -->
+        <!-- Saple table -->
         <div class="container-fluid px-1 py-5 mx-auto">
             <div class="row d-flex justify-content-center">
-                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                     <h2 class="text-center">Request a Tele-diagnosis</h2>
                     <p class="blue-text text-center">Just answer a few questions so that we can diagnose your renal health </p>
+                    <h6>Here are some sample data. You can either use these to test the tele-diagnosis system or fill-up your own personal and clinical information to checkup your kidney.</h6>
+                   
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Sex</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Specific Gravety</th>
+                            <th scope="col">Albumin</th>
+                            <th scope="col">Serum Creatinine</th>
+                            <th scope="col">Hemoglobine</th>
+                            <th scope="col">Red Blood Cells</th>
+                            <th scope="col">Pus Cell Clumps</th>
+                            <th scope="col">Hypertension</th>
+                            <th scope="col">Diabetes Mellitias</th>
+                            <th scope="col">Class</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                      
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sherlok</td>
+                            <td>Male</td>
+                            <td>58</td>
+                            <td>1.025</td>
+                            <td>0</td>
+                            <td>1.1</td>
+                            <td>15.8</td>
+                            <td>normal</td>
+                            <td>notpresent</td>
+                            <td>no</td>
+                            <td>no</td>
+                            <td>notckd</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Ana</td>
+                            <td>Female</td>
+                            <td>60</td>
+                            <td>1.010</td>
+                            <td>1.0</td>
+                            <td>3.9</td>
+                            <td>13.8</td>
+                            <td>NaN</td>
+                            <td>notpresent</td>
+                            <td>yes</td>
+                            <td>no</td>
+                            <td>ckd</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enola</td>
+                            <td>Female</td>
+                            <td>17</td>
+                            <td>1.025</td>
+                            <td>0.0</td>
+                            <td>1.0</td>
+                            <td>14.2</td>
+                            <td>normal</td>
+                            <td>notpresent</td>
+                            <td>no</td>
+                            <td>no</td>
+                            <td>notckd</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Thomas</td>
+                            <td>Male</td>
+                            <td>65</td>
+                            <td>1.015</td>
+                            <td>4.0</td>
+                            <td>1.5</td>
+                            <td>11.0</td>
+                            <td>NaN</td>
+                            <td>present</td>
+                            <td>yes</td>
+                            <td>yes</td>
+                            <td>ckd</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <!-- <div class="container-fluid px-1 py-5 mx-auto"> -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
                     <div class="card">
                         <h5 class="text-center mb-4 form-title"> Fill the form based on your recent medical report</h5>
                         
@@ -163,7 +259,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
 
     </body>
     {% endblock %}
