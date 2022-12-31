@@ -65,18 +65,21 @@
                                     <input type="number" step="any" name="specific_gravety" placeholder="enter your sg level">
                                 </div>
 
-                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                <!-- <div class="form-group col-sm-6 flex-column d-flex"> 
                                     <label class="form-control-label px-3">Blood urea (bu) <span class="text-info">*mgs/dl</span></label> 
-                                    <!-- <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">  -->
                                     <input type="number" step="any" name="blood_urea" placeholder="enter your bu level">
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="row justify-content-between text-left">
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
-                                    <label class="form-control-label px-3">Red Blood Cells count (rbc)<span class="text-info"> *millions/cmm</span></label> 
+                                    <label class="form-control-label px-3">Red Blood Cells (rbc)<span class="text-info"> *millions/cmm</span></label> 
                                     <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
-                                    <input type="number" step="any" name="red_blood_cells" placeholder="enter your rbc score">
+                                    <!-- <input type="number" step="any" name="red_blood_cells" placeholder="enter your rbc score"> -->
+                                    <div>
+                                        <input type="radio" step="any" name="red_blood_cells" value="normal"> normal 
+                                        <input type="radio" step="any" name="red_blood_cells" value="abnormal"> abnormal <br> 
+                                    </div>
                                 </div>
                                 <div class="form-group col-sm-6 flex-column d-flex"> 
                                     <label class="form-control-label px-3">Serum Creatinine (sc)<span class="text-info"> *mgs/dl</span></label> 
@@ -91,6 +94,14 @@
                                     <!-- <input type="text" id="job" name="job" placeholder="" onblur="validate(5)">  -->
                                     <input type="number" step="any" name="hemoglobine" placeholder="enter your hemo quantity">
                                 </div>
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">pus_cell_clumps <span class="text-info"> *gms</span></label> 
+                                    <!-- <input type="text" id="job" name="job" placeholder="" onblur="validate(5)">  -->
+                                    <div>
+                                        <input type="radio" step="any" name="pus_cell_clumps" value="present"> present 
+                                        <input type="radio" step="any" name="pus_cell_clumps" value="notpresent"> notpresent <br> 
+                                    </div>
+                                </div>
                             </div>
 
                 
@@ -99,8 +110,8 @@
                                 <div class="form-group col-12 flex-column d-flex"> 
                                     <label class="form-control-label px-3">Hypertension<span class="text-danger"> *</span></label> 
                                     <div>
-                                        <input type="radio" step="any" name="hypertension" value="1"> Yes 
-                                        <input type="radio" step="any" name="hypertension" value="0"> No <br> 
+                                        <input type="radio" step="any" name="hypertension" value="yes"> Yes 
+                                        <input type="radio" step="any" name="hypertension" value="no"> No <br> 
                                     </div>
                                 </div>
                             </div>
@@ -112,8 +123,8 @@
                                     <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
                                     <div>
                                         <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
-                                        <input type="radio" name = "diabetes_mellitias" value="1"> Yes 
-                                        <input type="radio" name = "diabetes_mellitias" value="0"> No <br>
+                                        <input type="radio" name = "diabetes_mellitias" value="yes"> Yes 
+                                        <input type="radio" name = "diabetes_mellitias" value="no"> No <br>
                                     </div>
                                 </div>
                             </div>
@@ -123,12 +134,12 @@
                                     <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
                                     <div>
                                         <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
-                                        <input type="radio" name = "albumin" value="0"> 0.00 +
-                                        <input type="radio" name = "albumin" value="1"> 1.00 + 
-                                        <input type="radio" name = "albumin" value="2"> 2.00 + 
-                                        <input type="radio" name = "albumin" value="3"> 3.00 +
-                                        <input type="radio" name = "albumin" value="4"> 4.00 +
-                                        <input type="radio" name = "albumin" value="5"> 5.00 + <br>  <br>  <br>
+                                        <input type="radio" name = "albumin" value=0> 0.00 +
+                                        <input type="radio" name = "albumin" value=1> 1.00 + 
+                                        <input type="radio" name = "albumin" value=2> 2.00 + 
+                                        <input type="radio" name = "albumin" value=3> 3.00 +
+                                        <input type="radio" name = "albumin" value=4> 4.00 +
+                                        <input type="radio" name = "albumin" value=5> 5.00 + <br>  <br>  <br>
                                     </div>
                                 </div>
                             </div>
