@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+<html>
+    {% block body %}
+    <body id="page-top">
+    
+     <!-- start report generation-->
+     {% if Result %}
+    <section class="page-section bg-primary text-white mb-0">
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
+                <h2 class="text-center">Tele-diagnosis Result</h2>
+                <p class="white-text text-center">The result has been generated based on your clinical data provided in the form.</p>
+                <div class="card">
+                    <section class="report">
+
+                        <div class="result-ttitle">
+                            <h1>Kidney health checkup report</h1>
+                            <p> Issue: {{context['issue_date']}}</p> 
+                        </div>
+
+                        <div class="row row-padding ">
+                            <div class="col-lg-12 ">
+
+                                <!--personal data report start-->
+                                <div class="personal-details">
+                                    <h1 class="text-left">Personal Information</h1>
+                        
+                                    <div class="patient">
+                                        <p>Name </p><span>{{context['name']}}</span>
+                                    </div>
+                                    
+                                    
+                                    <div class="sexpart">
+                                        <div class="patient-age">
+                                            <p>Age </p><span>{{context['age']}}</span>
+                                        </div>
+                                        
+                                        <div class="sex-patients">
+                                            <p>Sex</p><span  class="p-sex">{{context['sex']}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        
+                                <!--clinic data report start-->
+                                <div class="personal-details">
+                                    <h1 class="text-left">Clinical Data</h1>
+                        
+                                    <div class="cline-data">
+                                        <p>Specific Gravety </p><span>{{context['specific_gravety']}}</span> 
+                                    </div>
+
+                                    <div class="cline-data">
+                                        <p>Albumin </p><span> {{context['albumin']}}.00 +</span>
+                                    </div>
+                                
+                                    <div class="cline-data">
+                                        <p>Pus Cell Clumps </p><span> {{context['pus_cell_clumps']}}</span>
+                                    </div>
+                                
+                                    <div class="cline-data">
+                                        <p>Serum Creatinine (mgs/dl) </p><span> {{context['serum_creatinine']}}</span>
+                                    </div>
+                                
+                                    <div class="cline-data">
+                                        <p>hemoglobin (gms) </p><span> {{context['hemoglobine']}}</span>
+                                    </div>
+                                
+                                    <div class="cline-data">
+                                        <p>Red Blood Cell (millions/cm) </p><span> {{context['red_blood_cells']}}</span>
+                                    </div>
+                                
+                                    <div class="cline-data">
+                                        <p>Hypertension </p><span> {{context['hypertension']}}</span>
+                                    </div>
+
+                                    <div class="cline-data">
+                                        <p>diabetes mellitias {{diabetes_mellitias}} </p><span class="text-center">:{{context['diabetes_mellitias']}}</span>
+                                    </div>
+                                </div>
+
+                                <!--checkup report start-->
+                                <div class="personal-details">
+                                    <h1 class="text-left">kidney checkup Report</h1>
+
+                                    <div class="cline-data">
+                                        <p><b>Tele-diagnosis result </b></p><span class="text-center"><b>{{Result}}</b></span> 
+                                    </div>
+                                    
+                                    <div class="cline-data">
+                                        <p><b>Kidney health status </b></p><span class="text-center"><b>{{status}}</b></span> 
+                                    </div>
+
+                                    <div class="cline-data">
+                                        <p><b>Risk to develop long-term kidney disease</b></p><span class="text-center"><b>{{risk}}</b></span>
+                                    </div>
+                                </div>
+                        
+                                <!--checkup report end-->
+                                <embed src="" type="application/pdf" width="100%" height="auto">
+
+                            </div>
+                        </div>
+                        
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+     {% endif %}
+    
+    </body>
+    {% endblock %}
+</html>

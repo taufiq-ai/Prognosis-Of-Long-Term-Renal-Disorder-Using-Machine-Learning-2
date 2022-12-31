@@ -1,29 +1,266 @@
-<!DOCTYPE html>
-<body>
-    <h1>Enter Features</h1>
-
-    <form action="/" method="POST">
-        <input type="number" step="any" name="specific_gravety" placeholder="specific_gravety">
-        <input type="number" step="any" name="albumin" placeholder="albumin">
-        <input type="number" step="any" name="blood_urea" placeholder="blood_urea">
-        <input type="number" step="any" name="serum_creatinine" placeholder="serum_creatinine">
-        <input type="number" step="any" name="hemoglobine" placeholder="hemoglobine">
-        <input type="number" step="any" name="red_blood_cells" placeholder="red_blood_cells">
-        <input type="number" step="any" name="hypertension" placeholder="hypertension">
-        <input type="number" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias">
-        <input type="submit">
-    </form>
+{% extends "base.html" %}
+<html>
+{% block body %}
 
 
-    <hr>
-    
-    
-    {% if Result %}
-    <p>Diagonostic Result</p>
-    {{Result}}    
-    {% endif %}
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="{{ url_for('static', filename='assets/img/avataaars.svg')}}" alt="..." /> <!--RELINKED-->
+                <!-- Masthead Heading-->
+                <h6 class="masthead-heading text-uppercase mb-0">Hi! I am Taufiq, an AI/ML enthusiast</h6>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0"> This is one of my personal Machine Learning projects. You can check up your Kidney health within a few seconds based on some of your clinical data using this Machine Leanring based Tele-diagnosis WebApp. If you're interested to learn more about the project please visit the About section. Thank you.</p>
+            </div>
+        </header>
 
-</body>
 
 
+
+    <!-- All content here -->
+    <body id="page-top">
+
+        <!-- Saple table -->
+        <div class="container-fluid px-1 py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                    <h2 class="text-center">Request a Tele-diagnosis</h2>
+                    <p class="blue-text text-center">Just answer a few questions so that we can diagnose your renal health </p>
+                    <h6>Here are some sample data. You can either use these to test the tele-diagnosis system or fill-up your own personal and clinical information to checkup your kidney.</h6>
+                   
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Sex</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Specific Gravety</th>
+                            <th scope="col">Albumin</th>
+                            <th scope="col">Serum Creatinine</th>
+                            <th scope="col">Hemoglobine</th>
+                            <th scope="col">Red Blood Cells</th>
+                            <th scope="col">Pus Cell Clumps</th>
+                            <th scope="col">Hypertension</th>
+                            <th scope="col">Diabetes Mellitias</th>
+                            <th scope="col">Class</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                      
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sherlok</td>
+                            <td>Male</td>
+                            <td>58</td>
+                            <td>1.025</td>
+                            <td>0</td>
+                            <td>1.1</td>
+                            <td>15.8</td>
+                            <td>normal</td>
+                            <td>notpresent</td>
+                            <td>no</td>
+                            <td>no</td>
+                            <td>notckd</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Ana</td>
+                            <td>Female</td>
+                            <td>60</td>
+                            <td>1.010</td>
+                            <td>1.0</td>
+                            <td>3.9</td>
+                            <td>13.8</td>
+                            <td>NaN</td>
+                            <td>notpresent</td>
+                            <td>yes</td>
+                            <td>no</td>
+                            <td>ckd</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Enola</td>
+                            <td>Female</td>
+                            <td>17</td>
+                            <td>1.025</td>
+                            <td>0.0</td>
+                            <td>1.0</td>
+                            <td>14.2</td>
+                            <td>normal</td>
+                            <td>notpresent</td>
+                            <td>no</td>
+                            <td>no</td>
+                            <td>notckd</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Thomas</td>
+                            <td>Male</td>
+                            <td>65</td>
+                            <td>1.015</td>
+                            <td>4.0</td>
+                            <td>1.5</td>
+                            <td>11.0</td>
+                            <td>NaN</td>
+                            <td>present</td>
+                            <td>yes</td>
+                            <td>yes</td>
+                            <td>ckd</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <!-- <div class="container-fluid px-1 py-5 mx-auto"> -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-left">
+                    <div class="card">
+                        <h5 class="text-center mb-4 form-title"> Fill the form based on your recent medical report</h5>
+                        
+                        <form class="form-card" action="/report" method="POST">
+                            <div class="form-group col-sm-12"> 
+                                <label >Name </label> 
+                                <input type="text" class="form-control" name="name" placeholder="enter your Name">
+                            </div>
+                            <div class="d-flex justify-content-between ">
+                                
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Age </label> 
+                                    <input type="number"  name="age" placeholder="enter your age">
+                                </div>
+
+                                <div class="gander"> 
+                                    <label class="sex ">Sex<span class="text-danger"> *</span> : </label> 
+                                    <input type="radio" step="any" name="sex" value="Male"> Male 
+                                    <input type="radio" step="any" name="sex" value="Female"> Female <br> 
+                                </div>
+            
+
+
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Specific Gravety (sg)<span class="text-info"> </span></label> 
+                                    <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
+                                    <input type="number" step="any" name="specific_gravety" placeholder="enter your sg level">
+                                </div>
+
+                                <!-- <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Blood urea (bu) <span class="text-info">*mgs/dl</span></label> 
+                                    <input type="number" step="any" name="blood_urea" placeholder="enter your bu level">
+                                </div> -->
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Red Blood Cells (rbc)<span class="text-info"> *millions/cmm</span></label> 
+                                    <!-- <input type="text" id="email" name="email" placeholder="" onblur="validate(3)">  -->
+                                    <!-- <input type="number" step="any" name="red_blood_cells" placeholder="enter your rbc score"> -->
+                                    <div>
+                                        <input type="radio" step="any" name="red_blood_cells" value="normal"> normal 
+                                        <input type="radio" step="any" name="red_blood_cells" value="abnormal"> abnormal <br> 
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Serum Creatinine (sc)<span class="text-info"> *mgs/dl</span></label> 
+                                    <!-- <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)">  -->
+                                    <input type="number" step="any" name="serum_creatinine" placeholder="enter your sc level">
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Hemoglobine (hemo)<span class="text-info"> *gms</span></label> 
+                                    <!-- <input type="text" id="job" name="job" placeholder="" onblur="validate(5)">  -->
+                                    <input type="number" step="any" name="hemoglobine" placeholder="enter your hemo quantity">
+                                </div>
+                                <div class="form-group col-sm-6 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">pus_cell_clumps <span class="text-info"> *gms</span></label> 
+                                    <!-- <input type="text" id="job" name="job" placeholder="" onblur="validate(5)">  -->
+                                    <div>
+                                        <input type="radio" step="any" name="pus_cell_clumps" value="present"> present 
+                                        <input type="radio" step="any" name="pus_cell_clumps" value="notpresent"> notpresent <br> 
+                                    </div>
+                                </div>
+                            </div>
+
+                
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Hypertension<span class="text-danger"> *</span></label> 
+                                    <div>
+                                        <input type="radio" step="any" name="hypertension" value="yes"> Yes 
+                                        <input type="radio" step="any" name="hypertension" value="no"> No <br> 
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Diabetes Mellitias<span class="text-danger"> *</span></label> 
+                                    <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
+                                    <div>
+                                        <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
+                                        <input type="radio" name = "diabetes_mellitias" value="yes"> Yes 
+                                        <input type="radio" name = "diabetes_mellitias" value="no"> No <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between text-left">
+                                <div class="form-group col-12 flex-column d-flex"> 
+                                    <label class="form-control-label px-3">Albumin<span class="text-danger"> *</span></label> 
+                                    <!-- <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)">  -->
+                                    <div>
+                                        <!-- <input type="radio" step="any" name="diabetes_mellitias" placeholder="diabetes_mellitias"> -->
+                                        <input type="radio" name = "albumin" value=0> 0.00 +
+                                        <input type="radio" name = "albumin" value=1> 1.00 + 
+                                        <input type="radio" name = "albumin" value=2> 2.00 + 
+                                        <input type="radio" name = "albumin" value=3> 3.00 +
+                                        <input type="radio" name = "albumin" value=4> 4.00 +
+                                        <input type="radio" name = "albumin" value=5> 5.00 + <br>  <br>  <br>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- SUBMIT -->
+                            <div class="row d-flex justify-content-center">
+                                <div class="form-group col-sm-6"> 
+                                    <!-- <button type="submit" class="btn-block btn-primary">Analyze</button> 
+                                         <input type="submit" value="Analyze Your Kidney Health" class="btn btn-block btn-primary text-center">
+                                     -->
+                                     <button type="submit"  value="Analyze Your Kidney Health" class="btn btn-block btn-primary text-center" >Analyze Your Kidney Health</button>
+                                   
+                                </div>
+                            </div>
+
+                        </form>
+
+                      
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+
+    </body>
+    {% endblock %}
 </html>
